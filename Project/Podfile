@@ -1,4 +1,4 @@
-platform :osx, '10.8'
+platform :ios, '7.0'
 link_with 'GDChannel', 'GDChannelTests'
 
 # pod 'J2ObjC', :path => '~/dev/tools/lib/j2objc/J2ObjC.podspec'
