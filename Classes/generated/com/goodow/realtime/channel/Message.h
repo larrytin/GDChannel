@@ -13,12 +13,19 @@
 #import "JreEmulation.h"
 
 @protocol GDCMessage < NSObject, JavaObject >
+
 - (NSString *)address;
+
 - (id)body;
+
 - (void)fail:(int)failureCode message:(NSString *)msg;
+
 - (void)reply:(id)msg;
+
 - (void)reply:(id)msg replyHandler:(id)replyHandler;
+
 - (NSString *)replyAddress;
+
 @end
 
 #define ComGoodowRealtimeChannelMessage GDCMessage

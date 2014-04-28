@@ -14,17 +14,25 @@
 #import "JreEmulation.h"
 
 @protocol GDCBusHook < NSObject, JavaObject >
+
 - (void)handleOpened;
+
 - (void)handlePostClose;
+
 - (BOOL)handlePreClose;
+
 - (BOOL)handlePreRegisterWithNSString:(NSString *)address
      withComGoodowRealtimeCoreHandler:(id<ComGoodowRealtimeCoreHandler>)handler;
+
 - (BOOL)handleReceiveMessageWithGDCMessage:(id<GDCMessage>)message;
+
 - (BOOL)handleSendOrPubWithBoolean:(BOOL)send
                       withNSString:(NSString *)address
                             withId:(id)msg
   withComGoodowRealtimeCoreHandler:(id<ComGoodowRealtimeCoreHandler>)replyHandler;
+
 - (BOOL)handleUnregisterWithNSString:(NSString *)address;
+
 @end
 
 #define ComGoodowRealtimeChannelBusHook GDCBusHook
@@ -33,18 +41,29 @@
 }
 
 - (void)handleOpened;
+
 - (void)handlePostClose;
+
 - (BOOL)handlePreClose;
+
 - (BOOL)handlePreRegisterWithNSString:(NSString *)address
      withComGoodowRealtimeCoreHandler:(id<ComGoodowRealtimeCoreHandler>)handler;
+
 - (BOOL)handleReceiveMessageWithGDCMessage:(id<GDCMessage>)message;
+
 - (BOOL)handleSendOrPubWithBoolean:(BOOL)send
                       withNSString:(NSString *)address
                             withId:(id)msg
   withComGoodowRealtimeCoreHandler:(id<ComGoodowRealtimeCoreHandler>)replyHandler;
+
 - (BOOL)handleUnregisterWithNSString:(NSString *)address;
+
 - (id<GDCBusHook>)delegate;
+
 - (id)init;
+
 @end
+
+__attribute__((always_inline)) inline void GDCBusHook_BusHookProxy_init() {}
 
 #endif // _GDCBusHook_H_

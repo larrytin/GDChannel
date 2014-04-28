@@ -11,13 +11,12 @@
 #include "com/goodow/realtime/core/Handler.h"
 #include "com/goodow/realtime/core/HandlerRegistration.h"
 
-
 @implementation GDCBus
 
-static NSString * GDCBus_LOCAL_ = @"@";
-static NSString * GDCBus_LOCAL_ON_OPEN_ = @"@goodow.bus.onOpen";
-static NSString * GDCBus_LOCAL_ON_CLOSE_ = @"@goodow.bus.onClose";
-static NSString * GDCBus_LOCAL_ON_ERROR_ = @"@goodow.bus.onError";
+NSString * GDCBus_LOCAL_ = @"@";
+NSString * GDCBus_LOCAL_ON_OPEN_ = @"@goodow.bus.onOpen";
+NSString * GDCBus_LOCAL_ON_CLOSE_ = @"@goodow.bus.onClose";
+NSString * GDCBus_LOCAL_ON_ERROR_ = @"@goodow.bus.onError";
 
 + (NSString *)LOCAL {
   return GDCBus_LOCAL_;
@@ -45,10 +44,10 @@ static NSString * GDCBus_LOCAL_ON_ERROR_ = @"@goodow.bus.onError";
     { "setHookWithGDCBusHook:", "setHook", "Lcom.goodow.realtime.channel.Bus;", 0x401, NULL },
   };
   static J2ObjcFieldInfo fields[] = {
-    { "LOCAL_", NULL, 0x19, "Ljava.lang.String;" },
-    { "LOCAL_ON_OPEN_", NULL, 0x19, "Ljava.lang.String;" },
-    { "LOCAL_ON_CLOSE_", NULL, 0x19, "Ljava.lang.String;" },
-    { "LOCAL_ON_ERROR_", NULL, 0x19, "Ljava.lang.String;" },
+    { "LOCAL_", NULL, 0x19, "Ljava.lang.String;", &GDCBus_LOCAL_,  },
+    { "LOCAL_ON_OPEN_", NULL, 0x19, "Ljava.lang.String;", &GDCBus_LOCAL_ON_OPEN_,  },
+    { "LOCAL_ON_CLOSE_", NULL, 0x19, "Ljava.lang.String;", &GDCBus_LOCAL_ON_CLOSE_,  },
+    { "LOCAL_ON_ERROR_", NULL, 0x19, "Ljava.lang.String;", &GDCBus_LOCAL_ON_ERROR_,  },
   };
   static J2ObjcClassInfo _GDCBus = { "Bus", "com.goodow.realtime.channel", NULL, 0x201, 6, methods, 4, fields, 0, NULL};
   return &_GDCBus;

@@ -64,9 +64,9 @@
     { "failureType", NULL, "Lcom.goodow.realtime.channel.ReplyFailure;", 0x1, NULL },
   };
   static J2ObjcFieldInfo fields[] = {
-    { "serialVersionUID_", NULL, 0x1a, "J" },
-    { "failureType__", "failureType", 0x12, "Lcom.goodow.realtime.channel.ReplyFailure;" },
-    { "failureCode__", "failureCode", 0x12, "I" },
+    { "serialVersionUID_", NULL, 0x1a, "J", NULL, .constantValue.asLong = GDCReplyException_serialVersionUID },
+    { "failureType__", "failureType", 0x12, "Lcom.goodow.realtime.channel.ReplyFailure;", NULL,  },
+    { "failureCode__", "failureCode", 0x12, "I", NULL,  },
   };
   static J2ObjcClassInfo _GDCReplyException = { "ReplyException", "com.goodow.realtime.channel", NULL, 0x1, 5, methods, 3, fields, 0, NULL};
   return &_GDCReplyException;

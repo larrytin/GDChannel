@@ -11,7 +11,9 @@
 #import "JreEmulation.h"
 
 @protocol ComGoodowRealtimeCoreHandler < NSObject, JavaObject >
+
 - (void)handleWithId:(id)event;
+
 @end
 
 #endif // _ComGoodowRealtimeCoreHandler_H_

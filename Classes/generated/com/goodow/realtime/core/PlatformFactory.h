@@ -15,9 +15,13 @@
 #import "JreEmulation.h"
 
 @protocol ComGoodowRealtimeCorePlatformFactory < NSObject, JavaObject >
+
 - (id<ComGoodowRealtimeCoreNet>)net;
+
 - (id<ComGoodowRealtimeCoreScheduler>)scheduler;
+
 - (ComGoodowRealtimeCorePlatform_TypeEnum *)type;
+
 @end
 
 #endif // _ComGoodowRealtimeCorePlatformFactory_H_

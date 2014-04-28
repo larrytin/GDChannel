@@ -16,9 +16,13 @@
 
 @protocol ComGoodowRealtimeCoreFuture < ComGoodowRealtimeCoreAsyncResult, NSObject, JavaObject >
 - (BOOL)complete;
+
 - (id<ComGoodowRealtimeCoreFuture>)setFailureWithJavaLangThrowable:(JavaLangThrowable *)throwable;
+
 - (id<ComGoodowRealtimeCoreFuture>)setHandlerWithComGoodowRealtimeCoreHandler:(id<ComGoodowRealtimeCoreHandler>)handler;
+
 - (id<ComGoodowRealtimeCoreFuture>)setResultWithId:(id)result;
+
 @end
 
 #endif // _ComGoodowRealtimeCoreFuture_H_

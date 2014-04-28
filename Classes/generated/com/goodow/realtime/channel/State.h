@@ -27,7 +27,25 @@ typedef enum {
 + (IOSObjectArray *)values;
 + (GDCStateEnum *)valueOfWithNSString:(NSString *)name;
 - (id)copyWithZone:(NSZone *)zone;
+
 - (id)initWithNSString:(NSString *)__name withInt:(int)__ordinal;
 @end
+
+FOUNDATION_EXPORT BOOL GDCStateEnum_initialized;
+J2OBJC_STATIC_INIT(GDCStateEnum)
+
+FOUNDATION_EXPORT GDCStateEnum *GDCStateEnum_values[];
+
+#define GDCStateEnum_CONNECTING GDCStateEnum_values[GDCState_CONNECTING]
+J2OBJC_STATIC_FIELD_GETTER(GDCStateEnum, CONNECTING, GDCStateEnum *)
+
+#define GDCStateEnum_OPEN GDCStateEnum_values[GDCState_OPEN]
+J2OBJC_STATIC_FIELD_GETTER(GDCStateEnum, OPEN, GDCStateEnum *)
+
+#define GDCStateEnum_CLOSING GDCStateEnum_values[GDCState_CLOSING]
+J2OBJC_STATIC_FIELD_GETTER(GDCStateEnum, CLOSING, GDCStateEnum *)
+
+#define GDCStateEnum_CLOSED GDCStateEnum_values[GDCState_CLOSED]
+J2OBJC_STATIC_FIELD_GETTER(GDCStateEnum, CLOSED, GDCStateEnum *)
 
 #endif // _GDCState_H_
